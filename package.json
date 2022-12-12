@@ -1,5 +1,5 @@
 {
-  "name": "hybrid-cypher",
+  "name": "hybrid-cipher",
   "version": "1.0.0",
   "description": "This is a hybrid encryption and decryption model consist of Vigenere Cipher and Polybius Cipher",
   "main": "index.js",
@@ -13,11 +13,16 @@
   "keywords": [
     "encryption",
     "hybrid",
-    "cypher",
-    "cypher"
+    "Polybius",
+    "polybius cipher",
+    "polybius square",
+    "polybius square cipher",
+    "vigenere",
+    "vigenere cipher",
+    "cipher"
   ],
   "author": "Rasel Ahmed (Elubilu)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/elubilu/hybrid-cypher/issues"
   },
