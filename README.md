@@ -19,7 +19,7 @@
 | 8 | _ | ` | @ | { | \| | } | ~ | z |
 
 
-#### As the latin alphabet has 26 letters and the grid has 25 cells, a letter to remove is chosen, usually it's J, V, W or Z which are deleted. The order of the letters in the grid can be modified using a key to generate a deranged alphabet.
+#### As the latin alphabet has 52 letters (including samll and capital) and the grid has 64 cells, I have added 12 more sign to make it more versatile. The order of the letters in the grid can be modified using a key to generate a deranged alphabet.
 
 ##### The encryption phase is a substitution of each letter by its coordinates (row, column) in the grid.
 
@@ -29,6 +29,22 @@
 
 #### Polybius decryption requires to know the grid and consists in a substitution of couples of coordinates by the corresponding letter in the grid.
 #### Example: `57283612`, 57 stands for 5th row, 7th column, so letter `L`, and so on. The plain message is `Love`
+
+## What is the Vigenere cipher?
+
+#### The Vigenère cipher is a method of encrypting alphabetic text by using a series of interwoven Caesar ciphers, based on the letters of a keyword. It employs a form of polyalphabetic substitution
+
+## How to encrypt using Vigenere cipher?
+
+#### Encryption with Vigenere uses a key made of letters (and an alphabet). There are several ways to achieve the ciphering manually:
+
+#### In order to cipher a text, take the first letter of the message and the first letter of the key, add their ASCII value and  (letters have a value depending on their rank in the alphabet, starting with 0). The result of the addition modulo 128 (128= highest ASCII value) gives the rank of the ciphered letter. 
+
+## How to encrypt using Vigenere cipher?
+
+#### To decrypt, take the first letter of the ciphertext and the first letter of the key, and subtract their value (letters have a value equal to their position in the alphabet starting from 0). If the result is negative, add 128 (128=highest ASCII value), the result gives the rank of the plain letter.
+
+
 
 
 
