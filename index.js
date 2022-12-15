@@ -2,7 +2,7 @@
 // Declared polybiusDatasetStr by choosing a keyord which is 64 char long
 var polybiusDatasetStr = ['zebracdf','ghiklmno','pqstuvwx','yjZEBRAC','DFGHIKLM','NOPQSTUV','WXYJ[\]^', '_`@{|}~z'];
 
-function hybridCypherEncryption(msg, key, mode) {
+function hybridCypherEncryption(msg, key) {
 
     // If type of action is Encryption
    
