@@ -69,7 +69,7 @@ For hybridCypherDecryption you need to provide generated key(which is numeric), 
 let app = require("hybrid-cipher");
 
 app.hybridCypherEncryption("encode", "secretekey") # return 726552155573
-app.hybridCypherDecryption("726552155573", 'secretekey') # return  encode
+app.hybridCypherDecryption("726552155573", 'secretekey') # return encode
 
 app.hybridCypherEncryption("Encode", "secretekey") # return 386552155573
 app.hybridCypherDecryption("386552155573", 'secretekey') # return  Encode
@@ -90,8 +90,11 @@ app.hybridCypherDecryption("386552155573", 'key') # return  EdY|^t // here the r
 app.hybridCypherDecryption("846673641672826571", 'Secretekey') # return  hov_~d{hr // here the result is wrong, it supposed to be 'HelloWorld' 
 
 ```
-In such scenario, hacker knows your app generated key and secrete key  they can't steal your data as we have used two layers of cipher model which are Vigenere Cipher and Polybius Cipher.
-The generated key will looks like Vigenere Cipher so they will try to get the data by decrypting this methodology where we have used a new and custom methods for it. 
+#### In such scenario, hacker knows your app generated key and secrete key  they can't steal your data as we have used two layers of cipher model which are Vigenere Cipher and Polybius Cipher.
+#### The generated key will looks like Vigenere Cipher so they will try to get the data by decrypting this methodology where we have used a new and custom methods for it. 
+
+## DFD of Hybrid Cipher: 
+#### A product program will be composed to exhibit the viability of the calculation utilizing python coding and cryptanalysis technique will be performed on the ciphertext. A flowchart depicting the Hybrid Algorithm is as shown: 
 
 ![Alt text](images/DFD.jpg "Hybrid Cipher DFD")
 
