@@ -1,4 +1,9 @@
+[![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/elubilu/hybrid-cypher)
+[![npm version](https://badge.fury.io/js/password-meter-pro.svg)](https://badge.fury.io/js/hybrid-cipher)
+[![Downloads](https://img.shields.io/npm/dm/hybrid-cipher.svg)](https://www.npmjs.com/package/hybrid-cipher)
+
 # Hybrid Cipher
+### This is a hybrid encryption and decryption model consist of Vigenere Cipher and Polybius Cipher
 
 ## What is the Polybius cipher?
 
@@ -45,6 +50,49 @@
 #### To decrypt, take the first letter of the ciphertext and the first letter of the key, and subtract their value (letters have a value equal to their position in the alphabet starting from 0). If the result is negative, add 128 (128=highest ASCII value), the result gives the rank of the plain letter.
 
 
+## Installation
 
+Use the package manager [npm](https://www.npmjs.com/package/hybrid-cipher) to install [Hybrid Cipher](https://www.npmjs.com/package/hybrid-cipher).
 
+```bash
+npm i hybrid-cipher
+
+```
+
+## Usage
+
+It's very easy configure on your application. just follow on below: 
+For hybridCypherEncryption you need to provide message(which is Alphabet), then the secrete key(which is Alphabet)
+For hybridCypherDecryption you need to provide generated key(which is numeric), then the secrete key(which is Alphabet)
+
+```javascript
+let app = require("hybrid-cipher");
+
+app.hybridCypherEncryption("encode", "secretekey") # return 726552155573
+app.hybridCypherDecryption("726552155573", 'secretekey') # return  encode
+
+app.hybridCypherEncryption("Encode", "secretekey") # return 386552155573
+app.hybridCypherDecryption("386552155573", 'secretekey') # return  Encode
+
+app.hybridCypherEncryption("Encode", "Secretekey") # return 726552155573
+app.hybridCypherDecryption("726552155573", 'Secretekey') # return  Encode
+
+app.hybridCypherEncryption("HelloWorld", "something") # return 846673641672826571
+app.hybridCypherDecryption("846673641672826571", 'something') # return  HelloWorld
+
+```
+In such scenario, hacker knows your app generated key(which is numeric), they can't steal your data as it's stored in two layers
+
+```javascript
+let app = require("hybrid-cipher");
+
+app.hybridCypherDecryption("726552155573", 'something') # return  edY|Uq  // Here the result is wrong,  it supposed to be 'encode'
+
+app.hybridCypherDecryption("386552155573", 'key') # return  EdY|^t // here the result is wrong, it supposed to be 'Encode'
+
+app.hybridCypherDecryption("846673641672826571", 'Secretekey') # return  hov_~d{hr // here the result is wrong, it supposed to be 'HelloWorld' 
+
+```
+In such scenario, hacker knows your app generated key and secrete key  they can't steal your data as we have used two layers of cipher model which are Vigenere Cipher and Polybius Cipher.
+The generated key will looks like Vigenere Cipher so they will try to get the data by decrypting this methodology where we have used a new and custom methods for it. 
 

@@ -2,19 +2,17 @@
 // Declared polybiusDatasetStr by choosing a keyord which is 64 char long
 var polybiusDatasetStr = ['zebracdf','ghiklmno','pqstuvwx','yjZEBRAC','DFGHIKLM','NOPQSTUV','WXYJ[\]^', '_`@{|}~z'];
 
-function hybridCypher(msg, key, mode) {
+function hybridCypherEncryption(msg, key, mode) {
 
     // If type of action is Encryption
-    if(mode == 1){
-      var encrptData = vigenereEncrypt(key, msg);
-      return encrptData;
-    }
-    // If type of action is Decryption
-    else if(mode == 0){
+   
+      return vigenereEncrypt(key, msg);
+  }
+function hybridCypherDecryption(msg, key) {
+   
       // Called vigenereDecrypt function for Decryption
-      var decrptData = vigenereDecrypt(key,msg);
-      return decrptData;
-    }
+      return vigenereDecrypt(key,msg);
+    
   }
 function vigenereEncrypt(key, str) {
 
@@ -100,4 +98,7 @@ function polybiusDecrypt(key){
   return decrpKey;
 }
 
-module.exports = {hybridCypher}
+module.exports = {
+  hybridCypherEncryption,
+  hybridCypherDecryption
+}
