@@ -77,9 +77,6 @@ app.hybridCypherDecryption("386552155573", 'secretekey') # return  Encode
 app.hybridCypherEncryption("Encode", "Secretekey") # return 726552155573
 app.hybridCypherDecryption("726552155573", 'Secretekey') # return  Encode
 
-app.hybridCypherEncryption("HelloWorld", "something") # return 846673641672826571
-app.hybridCypherDecryption("846673641672826571", 'something') # return  HelloWorld
-
 ```
 In such scenario, hacker knows your app generated key(which is numeric), they can't steal your data as it's stored in two layers
 
