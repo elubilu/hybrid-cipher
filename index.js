@@ -5,7 +5,6 @@ var polybiusDatasetStr = ['zebracdf','ghiklmno','pqstuvwx','yjZEBRAC','DFGHIKLM'
 function hybridCypherEncryption(msg, key) {
 
     // If type of action is Encryption
-   
       return vigenereEncrypt(key, msg);
   }
 function hybridCypherDecryption(msg, key) {
@@ -89,14 +88,8 @@ function polybiusEncrypt(key){
 }
 function polybiusDecrypt(key){
   var decrpKey="";
-  for (var i = 0; i < key.length; i++){
-    for(let j=0; j<8; j++){
-      if(polybiusDatasetStr[j].indexOf(key[i])!= -1){
-        encrpKey += (j+1);
-        encrpKey += polybiusDatasetStr[j].indexOf(key[i])+1
-        break;
-      }
-    }
+  for (var i = 0; i < key.length; i+=2){
+    decrpKey+=polybiusDatasetStr[key[i]-1][key[i+1]-1];
   }
 //   console.log("********* Strat Hybrid Decryption **********")
 //   console.log(decrpKey);
