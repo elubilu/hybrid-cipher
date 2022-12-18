@@ -1,5 +1,5 @@
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/elubilu/hybrid-cypher)
-[![npm version](https://badge.fury.io/js/password-meter-pro.svg)](https://badge.fury.io/js/hybrid-cipher)
+[![npm version](https://badge.fury.io/js/hybrid-cipher.svg)](https://badge.fury.io/js/hybrid-cipher)
 [![Downloads](https://img.shields.io/npm/dm/hybrid-cipher.svg)](https://www.npmjs.com/package/hybrid-cipher)
 
 # Hybrid Cipher
